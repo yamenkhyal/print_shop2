@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:"#0b1640",gold:"#c9a227",sun:"#f0d36a",ink:"#0b1640"}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/media/brand/logo.jpg">
+  <title>اطلب خدمة | مكتبة غرناطة الإلكترونية</title>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="order-main section-wrap">
+  <header class="gallery-heading">
+    <p class="section-kicker">طلبك يبدأ من هنا</p>
+    <h1>اطلب خدمة طباعة</h1>
+    <p class="section-lead">أخبرنا بما تحتاج، وسنجهز لك رسالة مفصلة لبدء محادثة واتساب مباشرة.</p>
+  </header>
+
+  <!-- نموذج مختصر يقتصر على بيانات الطلب الضرورية. -->
+  <form id="order-form" class="order-form space-y-6">
+    <fieldset class="bg-white border border-[#e4dcc4] rounded-xl p-6 grid sm:grid-cols-2 gap-4">
+      <legend class="font-bold text-lg px-2">تفاصيل الطلب</legend>
+      <label class="block">الاسم الكامل *<input name="name" autocomplete="name" required class="field mt-1"></label>
+      <label class="block">رقم الواتساب *<input name="phone" type="tel" dir="ltr" inputmode="tel" autocomplete="tel" required class="field mt-1 text-start" placeholder="+963..."></label>
+      <label class="block">الخدمة المطلوبة *
+        <select id="service" name="service" required class="field mt-1"></select>
+      </label>
+      <label class="block">الكمية المطلوبة *
+        <input type="number" name="quantity" min="1" step="1" inputmode="numeric" required class="field mt-1" placeholder="مثال: 50">
+      </label>
+      <label class="block sm:col-span-2">المقاس / الأبعاد
+        <input name="size" class="field mt-1" placeholder="اختياري، مثال: 9×5 سم أو A5">
+      </label>
+      <label class="block sm:col-span-2">ملاحظات وتفاصيل إضافية
+        <textarea name="notes" rows="4" class="field mt-1" placeholder="مثل الأسماء المطلوب حفرها، الألوان، أو أي تفاصيل أخرى"></textarea>
+      </label>
+    </fieldset>
+
+    <!-- يجهز JavaScript جميع القيم في رسالة واتساب قبل فتح المحادثة. -->
+    <button class="w-full order-submit py-3 rounded-lg font-bold text-lg transition">أرسل الطلب عبر واتساب</button>
+    <div id="form-msg" role="status"></div>
+  </form>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="تعرّف على خدمات مكتبة غَرناطة للطباعة الرقمية واللوحات والهدايا المخصصة.">
+  <meta name="theme-color" content="#0b1640">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/media/brand/logo.jpg">
+  <title>خدماتنا | مكتبة غَرناطة الإلكترونية</title>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="page-shell">
+  <header class="page-intro">
+    <div class="section-wrap">
+      <p class="section-kicker">ما يمكننا تنفيذه</p>
+      <h1>خدمات مكتبة غَرناطة</h1>
+      <p>كتالوج لقدراتنا وخيارات التخصيص المتاحة. اختر الخدمة وأرسل تفاصيل طلبك لنساعدك في تحديد المواصفات المناسبة.</p>
+    </div>
+  </header>
+  <section class="digital-feature-wrap section-wrap" aria-label="تصميم وبرمجة مواقع الويب والتطبيقات">
+    <div id="digital-feature"></div>
+  </section>
+  <section class="passport-feature-wrap section-wrap" aria-label="خدمة حجز مواعيد جواز السفر">
+    <div id="passport-feature"></div>
+  </section>
+  <section class="services-main section-wrap">
+    <div id="services-detail" class="service-grid" aria-live="polite"></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script>
+document.getElementById("digital-feature").innerHTML = digitalServiceFeature();
+document.getElementById("passport-feature").innerHTML = passportFeatureCard();
+document.getElementById("services-detail").innerHTML = SERVICES.filter((service) => !["passport-booking", "web-design-development"].includes(service.id)).map(serviceCard).join("");
+</script>
+</body>
+</html>
