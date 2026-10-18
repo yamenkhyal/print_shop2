@@ -442,6 +442,7 @@ function renderProductCarousel(root, items, label) {
 
   const showSlide = (nextIndex) => {
     index = (nextIndex + slides.length) % slides.length;
+    slides[index].querySelector(".media-preview img").loading = "eager";
     track.style.transform = `translateX(-${index * 100}%)`;
     slides.forEach((slide, slideIndex) => {
       slide.setAttribute("aria-hidden", String(slideIndex !== index));
