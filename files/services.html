@@ -38,7 +38,7 @@
 <script>
 document.getElementById("digital-feature").innerHTML = digitalServiceFeature();
 document.getElementById("passport-feature").innerHTML = passportFeatureCard();
-const services = getClassifiedMedia("service");
+const services = getClassifiedMedia("service").filter((item) => item.filename !== "hero-wooden-pen-cutout.png");
 const servicesRoot = document.getElementById("services-detail");
 servicesRoot.innerHTML = services.map(mediaCard).join("");
 bindMediaGrid(servicesRoot);
