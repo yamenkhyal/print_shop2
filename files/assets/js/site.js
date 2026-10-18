@@ -2,6 +2,7 @@ const BRAND = {
   name: "مكتبة غرناطة الإلكترونية",
   tagline: "طباعة تليق بأفكاركم",
   logo: "assets/media/brand/logo.jpg",
+  navLogo: "assets/media/products/logo-mark-gold.png",
   email: "yamenkhyyal@gmail.com",
   phone: "+963 969 002 767",
   phoneIntl: "+352 681 508 166",
@@ -115,7 +116,7 @@ function renderLayout() {
     <header class="site-header">
       <div class="section-wrap site-header-inner flex items-center justify-between gap-4">
         <a href="index.html" class="brand-link flex items-center gap-3" aria-label="${BRAND.name} - الرئيسية">
-          <img src="${BRAND.logo}" alt="" class="brand-logo">
+          <img src="${BRAND.navLogo}" alt="" class="brand-logo">
           <span class="brand-name font-display font-bold">${BRAND.name}</span>
         </a>
         <nav class="desktop-nav flex items-center" aria-label="التنقل الرئيسي">
