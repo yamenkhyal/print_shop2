@@ -30,7 +30,7 @@
     <div id="passport-feature"></div>
   </section>
   <section class="services-main section-wrap">
-    <div id="services-detail" class="service-grid" aria-live="polite"></div>
+    <div id="services-detail" class="media-grid" aria-live="polite"></div>
   </section>
 </main>
 <div id="site-footer"></div>
@@ -38,7 +38,10 @@
 <script>
 document.getElementById("digital-feature").innerHTML = digitalServiceFeature();
 document.getElementById("passport-feature").innerHTML = passportFeatureCard();
-document.getElementById("services-detail").innerHTML = SERVICES.filter((service) => !["passport-booking", "web-design-development"].includes(service.id)).map(serviceCard).join("");
+const services = getClassifiedMedia("service");
+const servicesRoot = document.getElementById("services-detail");
+servicesRoot.innerHTML = services.map(mediaCard).join("");
+bindMediaGrid(servicesRoot);
 </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
   --navy: #0b1640;
   --navy-deep: #07112f;
   --gold: #c9a227;
-  --gold-hover: #b58f1f;
+  --gold-hover: #e5a93c;
   --snow: #f8fafc;
   --ink: #0f172a;
   --muted: #64748b;
@@ -370,28 +370,6 @@ p { line-height: 1.9; }
   line-height: 1.34;
 }
 
-.hero-title-ornament {
-  position: absolute;
-  z-index: -1;
-  inset: -0.16em -0.28em;
-  width: calc(100% + 0.56em);
-  height: calc(100% + 0.32em);
-  overflow: visible;
-  pointer-events: none;
-}
-
-.hero-title-ornament path {
-  fill: none;
-  stroke: #f0d36a;
-  stroke-dasharray: 22 78;
-  stroke-dashoffset: 100;
-  stroke-linecap: round;
-  stroke-width: 1.35;
-  opacity: 0;
-  filter: drop-shadow(0 0 4px rgb(240 211 106 / 35%));
-  animation: hero-title-orbit 8.2s ease-in-out infinite;
-}
-
 .hero-shimmer {
   color: #fff;
   background: linear-gradient(112deg, #fff 0%, #fff 38%, #f4d03f 47%, #fff6cc 51%, #fff 58%, #fff 100%);
@@ -407,13 +385,6 @@ p { line-height: 1.9; }
   0% { background-position: 140% 0; }
   28% { background-position: -40% 0; }
   100% { background-position: -40% 0; }
-}
-
-@keyframes hero-title-orbit {
-  0%, 36% { stroke-dashoffset: 100; opacity: 0; }
-  41% { opacity: 0.62; }
-  68% { stroke-dashoffset: -22; opacity: 0.48; }
-  74%, 100% { stroke-dashoffset: -22; opacity: 0; }
 }
 
 .hero-description {
@@ -645,6 +616,19 @@ p { line-height: 1.9; }
   margin-bottom: 1.35rem;
   color: #cbd5e1;
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+}
+
+.digital-engineer-badge {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 0.9rem;
+  padding: 0.45rem 0.8rem;
+  border-inline-start: 3px solid #f0d36a;
+  border-radius: 0.45rem;
+  color: #fff1b8;
+  background: linear-gradient(90deg, rgb(201 162 39 / 16%), rgb(201 162 39 / 5%));
+  font-size: 0.88rem;
+  font-weight: 700;
 }
 
 .digital-feature-cta {
@@ -932,9 +916,9 @@ p { line-height: 1.9; }
   z-index: 1;
 }
 
-.passport-feature-copy .section-kicker {
-  margin: 1.1rem 0 0.4rem;
-  color: #f0d36a;
+.passport-feature-copy .passport-feature-badge {
+  margin-bottom: 0.8rem;
+  border-radius: 0.7rem;
 }
 
 .passport-feature-copy h2 {
@@ -947,18 +931,6 @@ p { line-height: 1.9; }
   max-width: 42rem;
   margin-bottom: 1.2rem;
   color: #e2e8f0;
-}
-
-.passport-feature-badge {
-  display: inline-block;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid #f0d36a99;
-  border-radius: 999px;
-  color: #fff3bc;
-  background: #c9a22720;
-  font-size: 0.82rem;
-  font-weight: 700;
-  animation: badge-glow 2.6s ease-in-out infinite;
 }
 
 .passport-feature-cta {
@@ -987,30 +959,27 @@ p { line-height: 1.9; }
 }
 
 .passport-thumbnail {
-  width: min(100%, 17rem);
-  height: 10.5rem;
+  width: min(100%, 18rem);
+  aspect-ratio: 536 / 581;
   overflow: hidden;
   border: 1px solid rgb(240 211 106 / 70%);
-  border-radius: 1rem;
+  border-radius: 1.35rem 0.75rem 1.45rem 0.8rem / 1.05rem 1.35rem 0.8rem 1.25rem;
   background: #07112f;
   box-shadow: 0 14px 32px #02081766;
 }
 
 .passport-thumbnail img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 62%;
+  object-position: center;
+  background: #07112f;
 }
 
 @keyframes passport-border {
   0%, 100% { background-position: 0 0, 0% 50%; }
   50% { background-position: 0 0, 100% 50%; }
-}
-
-@keyframes badge-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(201 162 39 / 12%); }
-  50% { box-shadow: 0 0 18px 3px rgb(201 162 39 / 25%); }
 }
 
 .whatsapp-social-link {
@@ -1062,10 +1031,6 @@ p { line-height: 1.9; }
 
 .showcase-head .section-lead {
   margin-bottom: 0;
-}
-
-.showcase-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .media-card {
@@ -1137,6 +1102,75 @@ p { line-height: 1.9; }
   min-height: 2.65rem;
   padding: 0.55rem 0.7rem;
   font-size: 0.9rem;
+}
+
+.product-carousel {
+  width: min(100%, 54rem);
+  margin-inline: auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 1.1rem;
+}
+
+.carousel-track {
+  display: flex;
+  direction: ltr;
+  transition: transform 0.65s cubic-bezier(0.22, 0.68, 0, 1);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  direction: rtl;
+}
+
+.carousel-slide .media-card {
+  height: 100%;
+}
+
+.carousel-slide .media-preview img {
+  height: clamp(15rem, 45vw, 25rem);
+  object-fit: contain;
+  background: #e9eef5;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-control {
+  min-height: 2.65rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid #c9a22788;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.carousel-control:hover {
+  border-color: #e5a93c;
+  color: var(--navy);
+  background: #f4d03f;
+  transform: translateY(-2px);
+}
+
+.carousel-status {
+  min-width: 4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
 }
 
 .work-filter {
@@ -1556,15 +1590,13 @@ p { line-height: 1.9; }
 @media (max-width: 1000px) {
   .desktop-nav { gap: 0; }
   .nav-link { padding-inline: 0.45rem; }
-  .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 880px) {
   .site-header .desktop-nav { display: none; }
   .menu-btn { display: inline-grid; place-items: center; }
-  .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+  .hero-inner:not(.hero-showcase-layout) { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
   .hero-copy { max-width: 48rem; }
-  .hero-art { width: min(100%, 36rem); min-height: 24rem; margin-inline: auto; }
   .values-grid, .service-grid, .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-layout { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1582,7 +1614,7 @@ p { line-height: 1.9; }
   .site-header .brand-logo { width: 4.9rem; height: 3.9rem; flex-basis: 4.9rem; }
   .hero-inner { min-height: auto; margin-block: 1rem; padding: 1.6rem; border-radius: 1.15rem; }
   .showcase-head { align-items: flex-start; flex-direction: column; }
-  .showcase-grid, .values-grid, .service-grid, .media-grid { grid-template-columns: 1fr; }
+  .values-grid, .service-grid, .media-grid { grid-template-columns: 1fr; }
   .media-preview img { height: 16rem; }
   .whatsapp-actions, .contact-details { grid-template-columns: 1fr; }
   .contact-hours { grid-column: auto; }
@@ -1592,9 +1624,8 @@ p { line-height: 1.9; }
   .passport-feature-card { grid-template-columns: minmax(0, 1fr); }
   .passport-feature-art { grid-row: 1; }
   .passport-feature-art svg { width: 7rem; }
-  .passport-thumbnail { width: min(100%, 17rem); height: 9rem; }
-  .passport-feature-copy .section-kicker { margin-top: 0.8rem; }
-  .passport-feature-badge { font-size: 0.74rem; }
+  .passport-thumbnail { width: min(100%, 17rem); }
+  .passport-feature-copy .passport-feature-badge { margin-top: 0.8rem; }
   .digital-feature-card { gap: 0.8rem; padding: 1.25rem; }
   .digital-feature-copy h2 { font-size: 1.55rem; }
   .digital-mockup { min-height: 16rem; }
@@ -1610,11 +1641,9 @@ p { line-height: 1.9; }
   .max-w-6xl, .section-wrap { width: min(100% - 1.25rem, 76rem); }
   .brand-name { max-width: 10.5rem; font-size: 0.78rem; }
   .brand-logo { width: 2.45rem; height: 2.45rem; flex-basis: 2.45rem; }
+  .site-header .brand-logo { width: 4.5rem; height: 3.6rem; flex-basis: 4.5rem; }
   .menu-btn { width: 2.65rem; height: 2.65rem; flex: 0 0 2.65rem; }
   .hero-title { font-size: clamp(2rem, 10vw, 2.5rem); }
-  .hero-art { min-height: 17rem; }
-  .hero-art-main { inset: 16% 5% 10% 17%; }
-  .hero-art-card { top: 32%; left: 0; width: 43%; height: 36%; }
   .contact-panel, .contact-form, .order-panel { padding: 1rem; }
 }
 
@@ -1637,12 +1666,41 @@ p { line-height: 1.9; }
   .order-submit:hover,
   .digital-feature-cta:hover,
   .passport-feature-cta:hover {
-    border-color: #ffd700;
+    border-color: #f4d03f;
     color: var(--navy);
-    background: linear-gradient(110deg, #f59e0b, #fbbf24 52%, #ffd700);
-    box-shadow: 0 0 25px rgb(251 191 36 / 70%), 0 10px 30px -5px rgb(201 162 39 / 50%);
+    background: linear-gradient(110deg, #e5a93c, #f4d03f 52%, #ffe27a);
+    box-shadow: 0 0 25px rgb(244 208 63 / 55%), 0 10px 30px -5px rgb(201 162 39 / 50%);
     transform: translateY(-4px) scale(1.02);
+    animation: gold-hover-glow 2s ease-in-out infinite;
   }
+
+  .button-primary:hover,
+  .button-outline:not(.button-whatsapp):hover,
+  .button-navy:hover,
+  .button-gold-outline:hover,
+  .order-submit:hover,
+  .digital-feature-cta:hover,
+  .passport-feature-cta:hover {
+    animation: gold-hover-glow 2s ease-in-out infinite;
+  }
+
+  .button-outline.button-whatsapp:hover {
+    animation: whatsapp-hover-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes gold-hover-glow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgb(244 208 63 / 32%), 0 8px 22px -5px rgb(201 162 39 / 30%);
+  }
+  50% {
+    box-shadow: 0 0 26px rgb(244 208 63 / 72%), 0 12px 32px -5px rgb(201 162 39 / 55%);
+  }
+}
+
+@keyframes whatsapp-hover-glow {
+  0%, 100% { box-shadow: 0 0 10px rgb(37 211 102 / 30%), 0 8px 22px -5px rgb(37 211 102 / 22%); }
+  50% { box-shadow: 0 0 25px rgb(37 211 102 / 70%), 0 12px 32px -5px rgb(37 211 102 / 50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1653,7 +1711,6 @@ p { line-height: 1.9; }
     transition-duration: 0.01ms !important;
   }
 }
-  .site-header .brand-logo { width: 4.5rem; height: 3.6rem; flex-basis: 4.5rem; }
 
 .hero-showcase-layout {
   grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
@@ -1714,6 +1771,7 @@ p { line-height: 1.9; }
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
   object-fit: contain;
   object-position: center;
 }
@@ -1759,7 +1817,7 @@ p { line-height: 1.9; }
     animation: none;
   }
 
-  .hero-title-ornament {
-    display: none;
+  .hero-showcase-stage {
+    animation: none;
   }
 }

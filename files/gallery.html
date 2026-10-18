@@ -37,8 +37,8 @@ let currentFilter = "all";
 
 function renderGallery() {
   const works = currentFilter === "all"
-    ? MEDIA
-    : MEDIA.filter((item) => item.cat === currentFilter);
+    ? getClassifiedMedia("work")
+    : getClassifiedMedia("work").filter((item) => item.cat === currentFilter);
   gallery.innerHTML = works.length
     ? works.map(mediaCard).join("")
     : '<p class="section-lead">ستضاف نماذج هذا التصنيف إلى المعرض قريباً.</p>';

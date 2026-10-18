@@ -21,15 +21,12 @@
       <div class="hero-copy hero-showcase-copy">
         <p class="section-kicker">من الفكرة إلى الانطباع</p>
         <h1 class="hero-title">
-          <svg class="hero-title-ornament" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-            <path d="M 18 145 C 7 96 16 40 67 24 C 157 2 389 4 507 17 C 561 24 586 46 582 81" pathLength="100"></path>
-          </svg>
           <span class="hero-shimmer">مكتبة غَرناطة<br>الإلكترونية</span>
         </h1>
         <p class="hero-description">وجهتكم الأولى للطباعة الرقمية الاحترافية، الهدايا الدعائية الفاخرة، والحلول الإعلانية المتكاملة.</p>
         <div class="hero-actions">
           <a href="gallery.html" class="button-primary">تصفح المنتجات <span aria-hidden="true">←</span></a>
-          <a href="https://wa.me/963969002767?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D9%85%D9%86%20%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%BA%D8%B1%D9%86%D8%A7%D8%B7%D8%A9" class="button-outline" target="_blank" rel="noopener noreferrer">اطلب عبر واتساب <span aria-hidden="true">↗</span></a>
+          <a href="https://wa.me/963969002767?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D9%85%D9%86%20%D9%85%D9%83%D8%AA%D8%A8%D8%A9%20%D8%BA%D8%B1%D9%86%D8%A7%D8%B7%D8%A9" class="button-outline button-whatsapp" target="_blank" rel="noopener noreferrer">اطلب عبر واتساب <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <aside class="hero-showcase" aria-label="مختارات من منتجات المكتبة">
@@ -86,7 +83,7 @@
         </div>
         <a href="gallery.html" class="button-gold-outline">استكشف المعرض <span aria-hidden="true">←</span></a>
       </div>
-      <div id="home-gallery" class="media-grid showcase-grid" aria-label="أربع عينات من أعمالنا"></div>
+      <div id="home-gallery" aria-label="سلايدر أعمالنا"></div>
     </div>
   </section>
 
@@ -100,7 +97,7 @@
         </div>
         <a href="services.html" class="button-gold-outline">جميع الخدمات <span aria-hidden="true">←</span></a>
       </div>
-      <div id="services-grid" class="service-grid"></div>
+      <div id="services-grid" aria-label="سلايدر خدماتنا"></div>
     </div>
   </section>
 </main>
@@ -109,10 +106,12 @@
 <script>
 document.getElementById("digital-feature").innerHTML = digitalServiceFeature();
 document.getElementById("passport-feature").innerHTML = passportFeatureCard();
-document.getElementById("services-grid").innerHTML = SERVICES.filter((service) => !["passport-booking", "web-design-development"].includes(service.id)).slice(0, 3).map(serviceCard).join("");
 const homeGallery = document.getElementById("home-gallery");
-homeGallery.innerHTML = MEDIA.slice(0, 4).map(mediaCard).join("");
+renderProductCarousel(homeGallery, getClassifiedMedia("work"), "أعمالنا");
+const servicesCarousel = document.getElementById("services-grid");
+renderProductCarousel(servicesCarousel, getClassifiedMedia("service"), "خدماتنا");
 bindMediaGrid(homeGallery);
+bindMediaGrid(servicesCarousel);
 </script>
 </body>
 </html>

@@ -22,63 +22,63 @@ const SERVICES = [
     name: "كروت فيزيت وبطاقات أعمال",
     short: "بطاقات بهوية مخصصة وتشطيبات أنيقة تناسب نشاطك.",
     details: "تصميم وطباعة كروت شخصية وتجارية على خامات متعددة، مع خيارات الطباعة على الوجهين والتغطية.",
-    image: "assets/media/products/5911018096711896942.jpg",
+    image: "assets/media/products/business cards.jpg",
   },
   {
     id: "brochures",
     name: "دفاتر دعائية وبروشورات ومطويات إعلانية",
     short: "دفاتر دعائية ومطبوعات تعريفية تناسب علامتك التجارية.",
     details: "تصميم وطباعة دفاتر دعائية وبروشورات ومطويات إعلانية بأحجام وتشطيبات تناسب نشاطك.",
-    image: "assets/media/products/5911018096711896946.jpg",
+    image: "assets/media/products/advertising brochures.jpg",
   },
   {
     id: "flex",
     name: "فليكس إعلاني ولوحات ويافطات",
     short: "لوحات وواجهات خارجية وداخلية بمقاسات مخصصة.",
     details: "طباعة فليكس للوحات المحلات والواجهات والفعاليات، مع تجهيز المقاس حسب احتياج الموقع.",
-    image: "assets/media/products/5911018096711896972.jpg",
+    image: encodeURI("assets/media/products/flex advertising printed.jpg"),
   },
   {
     id: "vinyl",
     name: "فينيل لاصق ومثقب (One-Way Vision)",
     short: "حلول تغطية للزجاج تشمل One-Way Vision.",
     details: "قص وطباعة ملصقات الفينيل والمواد المثقبة (One-Way Vision) لواجهات الزجاج وإعلانات المحلات.",
-    image: "assets/media/products/5911018096711896969.jpg",
+    image: encodeURI("assets/media/products/perforated adhesive vinyl printed.jpg"),
   },
   {
     id: "engraved-gifts",
     name: "هدايا وأقلام فاخرة محفورة",
     short: "هدايا مكتبية وشخصية مخصصة بالأسماء والشعارات.",
     details: "تخصيص الهدايا والأقلام بالنقش أو الطباعة وفق المنتج والهوية المطلوبة.",
-    image: "assets/media/products/5911018096711896951.jpg",
+    image: encodeURI("assets/media/products/premium wooden pens (4).jpg"),
   },
   {
     id: "agendas",
     name: "مفكرات وأجندات جلدية مخصصة",
     short: "مفكرات عملية تحمل اسماً أو شعاراً حسب الطلب.",
     details: "تخصيص مفكرات وأجندات جلدية للاستخدام الشخصي أو كهدايا تعريفية للشركات.",
-    image: "assets/media/products/5911018096711896936.jpg",
+    image: encodeURI("assets/media/products/commercial planners  printed.jpg"),
   },
   {
     id: "keychains",
     name: "ميداليات مفاتيح مخصصة",
     short: "ميداليات عملية بتصاميم وألوان تناسب هويتك.",
     details: "ميداليات مفاتيح مخصصة للأفراد والفعاليات والمنشآت، بتصاميم متعددة قابلة للتخصيص.",
-    image: "assets/media/products/5911018096711896956.jpg",
+    image: "assets/media/products/medal.jpg",
   },
   {
     id: "flags",
     name: "أعلام وستاندات (مكتبية وشراعية وأعلام مقام)",
     short: "أعلام مكتبية وشراعية وأعلام مقام للفعاليات والمنشآت.",
     details: "تصميم وطباعة وتجهيز أعلام مكتبية وشراعية وأعلام مقام وستاندات عرض للمناسبات ونقاط البيع.",
-    image: "assets/media/products/5911018096711896945.jpg",
+    image: "assets/media/products/sail flags.jpg",
   },
   {
     id: "passport-booking",
     name: "حجز مواعيد جواز السفر الإلكتروني",
     short: "تسهيل معاملاتكم وحجز مواعيدكم بدقة وسرعة فائقة وبأعلى درجات الموثوقية.",
     details: "خدمة حجز مواعيد جواز السفر عبر المنصة الإلكترونية. تواصل معنا لمعرفة التفاصيل والمتطلبات.",
-    image: "",
+    image: "assets/media/products/passport appointment booking.jpg",
   },
   {
     id: "web-design-development",
@@ -223,15 +223,14 @@ function passportFeatureCard() {
   return `
     <article class="passport-feature-card">
       <div class="passport-feature-copy">
-        <span class="passport-feature-badge">✨ جديدنا | حجز مواعيد جواز السفر الإلكتروني</span>
-        <p class="section-kicker">خدمة جديدة من غرناطة</p>
+        <span class="digital-feature-badge passport-feature-badge">✨ جديدنا | حجز مواعيد جواز السفر الإلكتروني</span>
         <h2>${service.name}</h2>
         <p>${service.short}</p>
         <a class="button-primary passport-feature-cta" href="${waLink("مرحباً، أود حجز موعد جواز السفر الإلكتروني من مكتبة غرناطة")}" target="_blank" rel="noopener noreferrer">احجز موعدك الآن عبر واتساب <span aria-hidden="true">↗</span></a>
       </div>
       <div class="passport-feature-art">
         <div class="passport-thumbnail">
-          <img src="assets/media/products/5911018096711896982.jpg" alt="غلاف جواز سفر من تصميم إعلان الخدمة" loading="lazy" decoding="async">
+          <img src="assets/media/products/passport%20appointment%20booking.jpg" alt="تصميم خدمة حجز مواعيد جواز السفر الإلكتروني" loading="lazy" decoding="async">
         </div>
         <span>حجز إلكتروني بخطوات ميسّرة</span>
       </div>
@@ -246,6 +245,7 @@ function digitalServiceFeature() {
       <div class="digital-feature-copy">
         <span class="digital-feature-badge">✨ نأخذ علامتك التجارية إلى الفضاء الرقمي</span>
         <h2>نصمم ونطور <span>موقعك وتطبيقك</span> بأحدث التقنيات العصرية</h2>
+        <span class="digital-engineer-badge">بإشراف مهندس معلوماتية مختص</span>
         <p>${service.short} من الفكرة إلى الإطلاق، نصنع تجربة رقمية تليق بعلامتك.</p>
         <a class="button-primary digital-feature-cta" href="order.html?service=${encodeURIComponent(service.id)}">اطلب استشارة وتصميم موقعك <span aria-hidden="true">↗</span></a>
       </div>
@@ -269,22 +269,224 @@ function digitalServiceFeature() {
     </article>`;
 }
 
-const MEDIA = [
-  { src: "assets/media/products/5911018096711896972.jpg", cat: "signs", title: "واجهة فليكس لمول الخيرات" },
-  { src: "assets/media/products/5911018096711896969.jpg", cat: "signs", title: "فينيل مثقب لواجهة محل تجاري" },
-  { src: "assets/media/products/5911018096711896976.jpg", cat: "signs", title: "لوحة فليكس إعلانية لواجهة محل" },
-  { src: "assets/media/products/5911018096711896961.jpg", cat: "gifts", title: "مفكرة جلدية فاخرة مخصصة" },
-  { src: "assets/media/products/5911018096711896936.jpg", cat: "gifts", title: "مفكرة جلدية منقوشة باسم زبون" },
-  { src: "assets/media/products/5911018096711896951.jpg", cat: "gifts", title: "طقم قلم خشبي مع علبة مخصصة" },
-  { src: "assets/media/products/5911018096711896955.jpg", cat: "gifts", title: "قلم فاخر مع حفر ليزر" },
-  { src: "assets/media/products/5911018096711896952.jpg", cat: "gifts", title: "قلم خشبي داخل علبة مخصصة" },
-  { src: "assets/media/products/5911018096711896970.jpg", cat: "gifts", title: "قلم خشبي مخصص بحفر دقيق" },
-  { src: "assets/media/products/5911018096711896971.jpg", cat: "gifts", title: "قلم خشبي أنيق بهوية مخصصة" },
-  { src: "assets/media/products/5911018096711896960.jpg", cat: "print", title: "دفتر مكتبي مطبوع بهوية مخصصة" },
-  { src: "assets/media/products/5911018096711896963.jpg", cat: "print", title: "دفاتر دعائية ومطبوعات تعريفية" },
-  { src: "assets/media/products/5911018096711896966.jpg", cat: "print", title: "دفتر أعمال مطبوع حسب الطلب" },
-  { src: "assets/media/products/5911018096711896945.jpg", cat: "flags", title: "أعلام مكتبية بتصميم مخصص" },
+const MEDIA_FILES = [
+  "a variety of luxury pens (2).jpg",
+  "a variety of luxury pens.jpg",
+  "advertising brochures (2).jpg",
+  "advertising brochures (3).jpg",
+  "advertising brochures (4).jpg",
+  "advertising brochures.jpg",
+  "business cards.jpg",
+  "commercial planners  printed.jpg",
+  "commercial planners printed (2).jpg",
+  "desk flags (2).jpg",
+  "desk flags.jpg",
+  "flex advertising  printed(2).jpg",
+  "flex advertising  printed(3).jpg",
+  "flex advertising printed.jpg",
+  "hero-wooden-pen-cutout.png",
+  "logo-removebg-preview.png",
+  "medal.jpg",
+  "mobile stand pen (2).jpg",
+  "mobile stand pen (3).jpg",
+  "mobile stand pen.jpg",
+  "notebook (2).jpg",
+  "notebook (4).jpg",
+  "notebook (5).jpg",
+  "notebook (6).jpg",
+  "notebook (7).jpg",
+  "notebook.png",
+  "notebook printed(3).jpg",
+  "notebook printed.jpg",
+  "passport appointment booking.jpg",
+  "perforated adhesive vinyl printed(2).jpg",
+  "perforated adhesive vinyl printed(3).jpg",
+  "perforated adhesive vinyl printed(4).jpg",
+  "perforated adhesive vinyl printed.jpg",
+  "premium metal pens printed (2).jpg",
+  "premium metal pens printed (3).jpg",
+  "premium metal pens printed (4).jpg",
+  "premium metal pens printed.jpg",
+  "premium pens printed(2).jpg",
+  "premium pens printed.jpg",
+  "premium wooden pens  (6).jpg",
+  "premium wooden pens  printed(2).jpg",
+  "premium wooden pens (4).jpg",
+  "premium wooden pens (5).jpg",
+  "premium wooden pens (7).jpg",
+  "premium wooden pens printed (3).jpg",
+  "premium wooden pens printed.jpg",
+  "premium_wooden_pens (4).png",
+  "premium_wooden_pens___6_-removebg-preview.png",
+  "promotional notebooks printed (2).jpg",
+  "promotional notebooks printed.jpg",
+  "sail flags.jpg",
+  "semicircular medal.jpg",
 ];
+
+const MEDIA_LABELS = {
+  "a variety of luxury pens": "تشكيلة أقلام فاخرة",
+  "advertising brochures": "بروشورات إعلانية",
+  "business cards": "بطاقات أعمال",
+  "commercial planners": "أجندات تجارية",
+  "desk flags": "أعلام مكتبية",
+  "flex advertising": "إعلانات فلكس",
+  "hero wooden pen cutout": "قلم خشبي فاخر",
+  "medal": "ميدالية",
+  "mobile stand pen": "قلم بحامل جوال",
+  "notebook": "مفكرات",
+  "perforated adhesive vinyl": "فينيل لاصق مثقب",
+  "premium metal pens": "أقلام معدنية فاخرة",
+  "premium pens": "أقلام فاخرة",
+  "premium wooden pens": "قلم خشبي فاخر",
+  "promotional notebooks": "مفكرات دعائية",
+  "sail flags": "رايات شراعية",
+  "semicircular medal": "ميدالية نصف دائرية",
+};
+
+const MEDIA_CATEGORIES = {
+  "a variety of luxury pens": "gifts",
+  "advertising brochures": "print",
+  "business cards": "print",
+  "commercial planners": "print",
+  "desk flags": "flags",
+  "flex advertising": "signs",
+  "hero wooden pen cutout": "gifts",
+  "medal": "gifts",
+  "mobile stand pen": "gifts",
+  "notebook": "print",
+  "perforated adhesive vinyl": "signs",
+  "premium metal pens": "gifts",
+  "premium pens": "gifts",
+  "premium wooden pens": "gifts",
+  "promotional notebooks": "print",
+  "sail flags": "flags",
+  "semicircular medal": "gifts",
+};
+
+const UNMATCHED_MEDIA_FILES = [];
+const MEDIA_DEDICATED_FILES = new Set([
+  "logo-removebg-preview.png",
+  "passport appointment booking.jpg",
+]);
+
+function classifyMediaPath(relativePath) {
+  return /(^|[^a-z0-9])printed(?=$|[^a-z0-9])/i.test(relativePath) ? "work" : "service";
+}
+
+const MEDIA_ASSETS = MEDIA_FILES.map((filename) => {
+  const relativePath = `assets/media/products/${filename}`;
+  return {
+    filename,
+    relativePath,
+    type: classifyMediaPath(relativePath),
+  };
+});
+
+const MEDIA = MEDIA_ASSETS.flatMap((asset) => {
+  const { filename, relativePath, type } = asset;
+  if (MEDIA_DEDICATED_FILES.has(filename)) return [];
+
+  const name = filename
+    .replace(/\.[^.]+$/, "")
+    .replace(/(?:[-_ ]+removebg[-_ ]+preview)$/i, "")
+    .replace(/\s*\(\d+\)\s*/g, " ")
+    .replace(/[_-]+/g, " ")
+    .replace(/(^|[^a-z0-9])printed(?=$|[^a-z0-9])/gi, " ")
+    .replace(/\s+\d+\s*$/, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const title = MEDIA_LABELS[name];
+  const cat = MEDIA_CATEGORIES[name];
+  if (!title || !cat) {
+    UNMATCHED_MEDIA_FILES.push(filename);
+    console.warn(`Product image is missing a name or category mapping: ${filename}`);
+    return [];
+  }
+
+  return [{
+    src: encodeURI(relativePath),
+    cat,
+    type,
+    title,
+    filename,
+    relativePath,
+  }];
+});
+
+function getClassifiedMedia(type) {
+  return MEDIA.filter((item) => item.type === type);
+}
+
+function renderProductCarousel(root, items, label) {
+  root.innerHTML = `
+    <div class="product-carousel" data-carousel role="region" aria-roledescription="عارض شرائح" aria-label="${label}">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          ${items.map((item, slideIndex) => `<div class="carousel-slide" role="group" aria-roledescription="شريحة" aria-label="${slideIndex + 1} من ${items.length}">${mediaCard(item)}</div>`).join("")}
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-control" data-carousel-previous aria-label="الصورة السابقة">السابق</button>
+        <span class="carousel-status" aria-live="off"></span>
+        <button type="button" class="carousel-control" data-carousel-next aria-label="الصورة التالية">التالي</button>
+      </div>
+    </div>`;
+
+  const carousel = root.querySelector("[data-carousel]");
+  const track = carousel.querySelector(".carousel-track");
+  const slides = [...carousel.querySelectorAll(".carousel-slide")];
+  const status = carousel.querySelector(".carousel-status");
+  let index = 0;
+  let timer;
+
+  const showSlide = (nextIndex) => {
+    index = (nextIndex + slides.length) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, slideIndex) => {
+      slide.setAttribute("aria-hidden", String(slideIndex !== index));
+      slide.inert = slideIndex !== index;
+    });
+    status.textContent = `${index + 1} / ${slides.length}`;
+  };
+  const stop = () => window.clearInterval(timer);
+  const start = () => {
+    stop();
+    if (
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      && !document.hidden
+      && !carousel.matches(":hover")
+      && !carousel.contains(document.activeElement)
+    ) {
+      timer = window.setInterval(() => showSlide(index + 1), 3000);
+    }
+  };
+
+  carousel.querySelector("[data-carousel-previous]").addEventListener("click", () => {
+    showSlide(index - 1);
+    start();
+  });
+  carousel.querySelector("[data-carousel-next]").addEventListener("click", () => {
+    showSlide(index + 1);
+    start();
+  });
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+  carousel.addEventListener("focusin", stop);
+  carousel.addEventListener("focusout", (event) => {
+    if (!carousel.contains(event.relatedTarget)) start();
+  });
+  carousel.addEventListener("touchstart", stop, { passive: true });
+  carousel.addEventListener("touchend", start, { passive: true });
+  carousel.addEventListener("touchcancel", start, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
+  });
+
+  showSlide(0);
+  start();
+}
 
 const FILTERS = [
   ["all", "الكل"],
@@ -292,10 +494,12 @@ const FILTERS = [
   ["gifts", "هدايا ومكتبية"],
   ["print", "مطبوعات ورقية"],
   ["flags", "أعلام وميداليات"],
+  ["services", "خدمات متنوعة"],
 ];
 
 function mediaCard(item) {
   const orderHref = `contact.html?product=${encodeURIComponent(item.title)}`;
+  const orderLabel = item.type === "work" ? "اطلب عملاً مشابهاً" : "اطلب هذه الخدمة";
   return `
     <article class="media-card">
       <button type="button" class="media-preview" data-full-src="${item.src}" aria-label="تكبير صورة: ${item.title}">
@@ -304,7 +508,7 @@ function mediaCard(item) {
       </button>
       <div class="media-card-body">
         <h2 class="media-card-title">${item.title}</h2>
-        <a class="button-gold-outline media-order-link" href="${orderHref}">اطلب عملاً مشابهاً</a>
+        <a class="button-gold-outline media-order-link" href="${orderHref}">${orderLabel}</a>
       </div>
     </article>`;
 }
