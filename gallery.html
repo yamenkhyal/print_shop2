@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="معرض أعمال مكتبة غَرناطة في الطباعة واللوحات والهدايا والمطبوعات.">
+  <meta name="theme-color" content="#0b1640">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/media/brand/logo.jpg">
+  <title>أعمالنا | مكتبة غَرناطة الإلكترونية</title>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="page-shell">
+  <header class="page-intro">
+    <div class="section-wrap">
+      <p class="section-kicker">من الفكرة إلى التنفيذ</p>
+      <h1>أعمالنا المنفذة</h1>
+      <p>نماذج من أعمال الطباعة والهدايا والواجهات. اختر عملاً لعرض صورته أو أرسل طلباً مشابهاً مع اسم العمل مرفقاً تلقائياً.</p>
+    </div>
+  </header>
+  <section class="gallery-main section-wrap">
+    <div id="filters" class="work-filter" role="group" aria-label="تصفية الأعمال"></div>
+    <div id="gallery" class="media-grid" aria-live="polite"></div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script>
+const gallery = document.getElementById("gallery");
+const filters = document.getElementById("filters");
+let currentFilter = "all";
+
+function renderGallery() {
+  const works = currentFilter === "all"
+    ? getClassifiedMedia("work")
+    : getClassifiedMedia("work").filter((item) => item.cat === currentFilter);
+  gallery.innerHTML = works.length
+    ? works.map(mediaCard).join("")
+    : '<p class="section-lead">ستضاف نماذج هذا التصنيف إلى المعرض قريباً.</p>';
+  filters.querySelectorAll(".filter-btn").forEach((button) => {
+    const active = button.dataset.cat === currentFilter;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+filters.innerHTML = FILTERS.map(([id, label]) =>
+  `<button type="button" class="filter-btn${id === currentFilter ? " active" : ""}" data-cat="${id}" aria-pressed="${id === currentFilter}">${label}</button>`
+).join("");
+filters.addEventListener("click", (event) => {
+  const button = event.target.closest(".filter-btn");
+  if (!button) return;
+  currentFilter = button.dataset.cat;
+  renderGallery();
+});
+bindMediaGrid(gallery);
+renderGallery();
+</script>
+</body>
+</html>
