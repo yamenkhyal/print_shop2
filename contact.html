@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:"#0b1640",gold:"#c9a227",sun:"#f0d36a",ink:"#0b1640"}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/media/brand/logo.jpg">
+  <title>تواصل معنا | مكتبة غرناطة الإلكترونية</title>
+</head>
+<body>
+<div id="site-header"></div>
+<main class="contact-main section-wrap contact-page">
+  <section class="contact-intro">
+    <p class="gallery-eyebrow">نحن هنا لمساعدتك</p>
+    <h1 class="text-4xl font-bold mb-2">تواصل معنا</h1>
+    <p class="text-slate-600">اسألنا عن سعر أو خامة أو موعد تسليم، وسيسعد فريقنا بمساعدتك.</p>
+  </section>
+  <div class="contact-layout">
+    <!-- بطاقات مستقلة لخيارات واتساب والبريد والمنصات الاجتماعية. -->
+    <div class="contact-info-stack">
+      <section class="contact-panel" aria-label="التواصل عبر واتساب">
+        <h2>راسلنا مباشرة عبر واتساب</h2>
+        <p class="contact-panel-intro">اختر الرقم الأنسب لبدء محادثة مباشرة.</p>
+        <div class="whatsapp-actions">
+          <a class="contact-method" href="https://wa.me/963969002767" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"></path><path d="M9 8.5c.4 2.6 2 4.2 4.6 5"></path></svg></span>
+            <span class="contact-method-copy"><span class="contact-label">واتساب سوريا</span><b dir="ltr">+963 969 002 767</b><span class="contact-chat-label">ابدأ المحادثة ←</span></span>
+          </a>
+          <a class="contact-method" href="https://wa.me/352681508166" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"></path><path d="M9 8.5c.4 2.6 2 4.2 4.6 5"></path></svg></span>
+            <span class="contact-method-copy"><span class="contact-label">واتساب دولي</span><b dir="ltr">+352 681 508 166</b><span class="contact-chat-label">ابدأ المحادثة ←</span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="contact-panel" aria-label="البريد والمنصات الاجتماعية">
+        <h2>البريد والمنصات</h2>
+        <p class="contact-panel-intro">تابع جديدنا أو راسلنا عبر المنصة التي تفضلها.</p>
+        <div class="contact-details">
+          <a class="contact-method" href="mailto:yamenkhyyal@gmail.com">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span class="contact-method-copy"><span class="contact-label">البريد الرسمي</span><b dir="ltr">yamenkhyyal@gmail.com</b></span>
+          </a>
+          <a class="contact-method" href="https://www.instagram.com/granada_library11/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">◎</span>
+            <span class="contact-method-copy"><span class="contact-label">إنستغرام</span><b dir="ltr">@Granada_Library11</b></span>
+          </a>
+          <a class="contact-method contact-hours" href="https://www.facebook.com/share/1EcshP4HZh/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">f</span>
+            <span class="contact-method-copy"><span class="contact-label">فيسبوك</span><b>صفحة مكتبة غرناطة</b></span>
+          </a>
+          <a class="contact-method" href="https://t.me/Yamenkh24" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21 3-7.5 18-3.8-7.7L2 9.5 21 3Z"></path><path d="m9.7 13.3 4.8-4.8"></path></svg></span>
+            <span class="contact-method-copy"><span class="contact-label">تيليجرام</span><b dir="ltr">@Yamenkh24</b></span>
+          </a>
+          <a class="contact-method" href="https://wa.me/963969002767" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"></path><path d="M9 8.5c.4 2.6 2 4.2 4.6 5"></path></svg></span>
+            <span class="contact-method-copy"><span class="contact-label">واتساب</span><b dir="ltr">+963 969 002 767</b></span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+  <form id="contact-form" novalidate class="contact-form bg-white border border-[#e4dcc4] rounded-xl p-6 space-y-4 self-start">
+    <h2>أرسل لنا رسالة</h2>
+    <p class="text-slate-600">اكتب تفاصيل استفسارك وسنساعدك في أقرب وقت.</p>
+    <label class="block">الاسم *<input name="name" required class="field mt-1"></label>
+    <label class="block">رسالتك *<textarea name="message" rows="5" required class="field mt-1"></textarea></label>
+    <button class="w-full bg-navy text-white py-3 rounded-lg font-bold hover:bg-gold hover:text-navy transition">أرسل عبر واتساب</button>
+    <p id="contact-msg" role="status"></p>
+  </form>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js"></script>
+<script>
+const f = document.getElementById("contact-form");
+const m = document.getElementById("contact-msg");
+const requestedProduct = new URLSearchParams(location.search).get("product");
+if (requestedProduct) {
+  f.elements.namedItem("message").value = `مرحباً، أود طلب عمل مشابه لـ: ${requestedProduct}`;
+}
+f.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let ok = true;
+  f.querySelectorAll("[required]").forEach((el) => {
+    const bad = !el.value.trim();
+    el.classList.toggle("invalid", bad);
+    if (bad) ok = false;
+  });
+  m.className = "rounded-lg p-3 " + (ok ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700");
+  if (!ok) {
+    m.textContent = "أكمل الحقول المطلوبة المحددة باللون الأحمر.";
+    return;
+  }
+  const text = `رسالة من الموقع
+الاسم: ${f.elements.namedItem("name").value.trim()}
+${f.elements.namedItem("message").value.trim()}`;
+  const chat = window.open(waLink(text), "_blank");
+  if (!chat) {
+    m.className = "rounded-lg p-3 bg-red-50 text-red-700";
+    m.textContent = "تعذر فتح واتساب. تحقق من السماح بالنوافذ المنبثقة وحاول مجدداً.";
+    return;
+  }
+  chat.opener = null;
+  m.textContent = "افتحنا واتساب لإرسال الرسالة.";
+  f.reset();
+});
+</script>
+</body>
+</html>
