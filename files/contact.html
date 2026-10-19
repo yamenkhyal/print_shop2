@@ -70,7 +70,6 @@
     <h2>أرسل لنا رسالة</h2>
     <p class="text-slate-600">اكتب تفاصيل استفسارك وسنساعدك في أقرب وقت.</p>
     <label class="block">الاسم *<input name="name" required class="field mt-1"></label>
-    <label class="block">الهاتف أو البريد *<input name="contact" required class="field mt-1"></label>
     <label class="block">رسالتك *<textarea name="message" rows="5" required class="field mt-1"></textarea></label>
     <button class="w-full bg-navy text-white py-3 rounded-lg font-bold hover:bg-gold hover:text-navy transition">أرسل عبر واتساب</button>
     <p id="contact-msg" role="status"></p>
@@ -100,7 +99,6 @@ f.addEventListener("submit", (e) => {
   }
   const text = `رسالة من الموقع
 الاسم: ${f.elements.namedItem("name").value.trim()}
-التواصل: ${f.elements.namedItem("contact").value.trim()}
 ${f.elements.namedItem("message").value.trim()}`;
   const chat = window.open(waLink(text), "_blank");
   if (!chat) {

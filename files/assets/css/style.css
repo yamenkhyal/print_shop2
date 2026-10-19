@@ -391,7 +391,7 @@ p { line-height: 1.9; }
   max-width: 37rem;
   margin-bottom: 2rem;
   color: #e2e8f0;
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-size: clamp(1rem, 1.55vw, 1.12rem);
   line-height: 2.05;
 }
 

@@ -109,7 +109,11 @@ document.getElementById("passport-feature").innerHTML = passportFeatureCard();
 const homeGallery = document.getElementById("home-gallery");
 renderProductCarousel(homeGallery, getClassifiedMedia("work"), "أعمالنا");
 const servicesCarousel = document.getElementById("services-grid");
-renderProductCarousel(servicesCarousel, getClassifiedMedia("service"), "خدماتنا");
+renderProductCarousel(
+  servicesCarousel,
+  getClassifiedMedia("service").filter((item) => item.filename !== "hero-wooden-pen-cutout.png"),
+  "خدماتنا",
+);
 bindMediaGrid(homeGallery);
 bindMediaGrid(servicesCarousel);
 </script>

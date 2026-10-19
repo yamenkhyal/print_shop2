@@ -132,7 +132,7 @@ function renderLayout() {
     <footer class="site-footer">
       <div class="section-wrap footer-main">
         <section>
-          <img src="${BRAND.logo}" alt="" class="brand-logo footer-logo">
+          <img src="${BRAND.navLogo}" alt="" class="brand-logo footer-logo">
           <p class="footer-heading">${BRAND.name}</p>
           <p class="footer-description">${BRAND.tagline}. طباعة رقمية وهدايا وحلول إعلانية بهوية متقنة.</p>
           <div class="footer-socials" aria-label="منصات التواصل الاجتماعي">

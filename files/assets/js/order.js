@@ -25,7 +25,6 @@ form.addEventListener("submit", (e) => {
 الكمية: ${form.elements.namedItem("quantity").value}
 المقاس: ${size}
 الاسم الكامل: ${form.elements.namedItem("name").value.trim()}
-رقم الواتساب: ${form.elements.namedItem("phone").value.trim()}
 ملاحظات وتفاصيل إضافية: ${notes}`;
 
   // فتح المحادثة مباشرة ضمن إجراء الإرسال حتى لا يمنعها المتصفح كنافذة منبثقة.
